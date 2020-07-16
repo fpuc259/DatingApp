@@ -2,4 +2,4 @@
 bin
 obj
 *.db
-appsettings
+appsettings.json
