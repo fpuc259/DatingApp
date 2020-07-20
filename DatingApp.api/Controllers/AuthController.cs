@@ -40,8 +40,10 @@ namespace DatingApp.api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
-            if (userForLoginDto == null) return Unauthorized();
+            if (userForLoginDto == null) 
+                return Unauthorized();
 
             var claims = new[] {
                  new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
@@ -61,6 +63,10 @@ namespace DatingApp.api.Controllers
             return Ok(new {
                 token = tokenHandler.WriteToken(token)
             }); 
+                
+            
+           
+            
         }
 
 
