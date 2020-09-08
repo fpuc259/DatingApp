@@ -16,6 +16,8 @@ import {ErrorInterceptorProvider} from './_services/error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import {FileUploadModule} from 'ng2-file-upload';
+
 
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
@@ -29,6 +31,7 @@ import {MemberListResolver} from './_resolvers/member-list.resolver';
 import {MemberEditResolver} from './_resolvers/member-edit.resolver';
 
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import {PhotoEditorComponent} from './members/photo-editor/photo-editor.component';
 
 import {NgxGalleryModule} from 'ngx-gallery-9';
 import { AuthGuard } from './_guards/auth.guard';
@@ -52,7 +55,8 @@ export function tokenGetter() {
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
-      MemberEditComponent
+      MemberEditComponent,
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -63,6 +67,7 @@ export function tokenGetter() {
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
+      FileUploadModule,
       JwtModule.forRoot({
          config:  {
             tokenGetter: tokenGetter,
