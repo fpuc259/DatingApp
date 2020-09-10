@@ -31,7 +31,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
 import {MemberListResolver} from './_resolvers/member-list.resolver';
 import {MemberEditResolver} from './_resolvers/member-edit.resolver';
-
+import {TimeAgoPipe} from 'time-ago-pipe';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import {PhotoEditorComponent} from './members/photo-editor/photo-editor.component';
 
@@ -58,7 +58,8 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeAgoPipe
    ],
    imports: [
       BrowserModule,
