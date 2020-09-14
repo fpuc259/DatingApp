@@ -40,6 +40,7 @@ import {PhotoEditorComponent} from './members/photo-editor/photo-editor.componen
 import {NgxGalleryModule} from 'ngx-gallery-9';
 import { AuthGuard } from './_guards/auth.guard';
 import {PreventUnsavedChanges} from './_guards/prevent-unsaved-changes.guard';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 export function tokenGetter() {
@@ -93,6 +94,7 @@ export function tokenGetter() {
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      ListsResolver,
       PreventUnsavedChanges
    ],
    bootstrap: [
