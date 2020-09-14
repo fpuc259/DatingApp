@@ -16,6 +16,8 @@ import {ErrorInterceptorProvider} from './_services/error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import {PaginationModule} from 'ngx-bootstrap/pagination';
+import {ButtonsModule} from 'ngx-bootstrap/buttons';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import {FileUploadModule} from 'ng2-file-upload';
@@ -31,7 +33,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
 import {MemberListResolver} from './_resolvers/member-list.resolver';
 import {MemberEditResolver} from './_resolvers/member-edit.resolver';
-import {TimeAgoPipe} from 'time-ago-pipe';
+// import {TimeAgoPipe} from 'time-ago-pipe';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import {PhotoEditorComponent} from './members/photo-editor/photo-editor.component';
 
@@ -59,7 +61,7 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
-      TimeAgoPipe
+      // TimeAgoPipe
    ],
    imports: [
       BrowserModule,
@@ -68,6 +70,8 @@ export function tokenGetter() {
       ReactiveFormsModule,
       BrowserAnimationsModule,
       TabsModule.forRoot(),
+      ButtonsModule.forRoot(),
+      PaginationModule.forRoot(),
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(),
       RouterModule.forRoot(appRoutes),
