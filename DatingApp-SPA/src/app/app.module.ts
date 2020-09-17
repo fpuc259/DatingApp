@@ -28,6 +28,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import {appRoutes} from './routes';
 import {MemberCardComponent} from './members/member-card/member-card.component';
+import {MemberMessagesComponent} from './members/member-messages/member-messages.component';
 import { UserService } from './_services/user.service';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
@@ -41,6 +42,7 @@ import {NgxGalleryModule} from 'ngx-gallery-9';
 import { AuthGuard } from './_guards/auth.guard';
 import {PreventUnsavedChanges} from './_guards/prevent-unsaved-changes.guard';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import {MessagesResolver} from './_resolvers/messages.resolver';
 
 
 export function tokenGetter() {
@@ -62,6 +64,7 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
+      MemberMessagesComponent,
       // TimeAgoPipe
    ],
    imports: [
@@ -95,7 +98,8 @@ export function tokenGetter() {
       MemberListResolver,
       MemberEditResolver,
       ListsResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
